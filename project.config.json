@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "dist/",
+  "projectname": "zhilian-ai",
+  "description": "智炼 AI — 智能健身教练",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": false,
+    "postcss": false,
+    "previewCheckFileName": false
+  },
+  "compileType": "miniprogram",
+  "condition": {}
+}

@@ -1,0 +1,27 @@
+export default defineAppConfig({
+  pages: [
+    'pages/splash/index',
+    'pages/auth/login/index',
+    'pages/auth/onboarding/index',
+    'pages/main/index',
+    'pages/train/workout-intro/index',
+    'pages/train/workout-go/index',
+    'pages/train/workout-summary/index',
+    'pages/equipment/library/index',
+    'pages/equipment/detail/index',
+    'pages/equipment/scan/index',
+    'pages/profile/history/index',
+    'pages/profile/settings/index',
+    'pages/profile/notifications/index',
+    'pages/profile/vip/index',
+  ],
+  window: {
+    backgroundTextStyle: 'dark',
+    navigationBarBackgroundColor: '#0a0d0a',
+    navigationBarTitleText: '智炼 AI',
+    navigationBarTextStyle: 'white',
+    navigationStyle: 'custom',
+    backgroundColor: '#0a0d0a',
+  },
+  sitemapLocation: 'sitemap.json',
+})

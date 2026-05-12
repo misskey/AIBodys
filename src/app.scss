@@ -1,0 +1,179 @@
+@import './styles/variables';
+
+page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'PingFang SC', -apple-system, 'Helvetica Neue', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  overflow: hidden;
+}
+
+// 滚动区域隐藏滚动条
+.scroll-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar { display: none; }
+}
+
+// 通用卡片
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+.card-dim {
+  background: var(--surface-2);
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+// Lime 主按钮
+.btn-lime {
+  background: var(--lime);
+  color: #0a0d0a;
+  font-weight: 700;
+  border-radius: 100px;
+  padding: 16px 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  letter-spacing: 0.2px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:active { opacity: 0.88; }
+  &[disabled] { opacity: 0.4; }
+}
+
+// 标签 chip
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(206, 255, 77, 0.10);
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+// 图标按钮
+.iconbtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:active { background: rgba(255, 255, 255, 0.12); }
+}
+
+// 列表行
+.row {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+
+  & + .row { border-top: 1px solid var(--line); }
+  &:active { background: rgba(255, 255, 255, 0.03); }
+}
+
+// 分段标签
+.tabs {
+  display: flex;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding: 0 4px;
+
+  .tab-item {
+    padding: 12px 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-3);
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+      color: var(--text);
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -1px;
+        height: 2.5px;
+        background: var(--lime);
+        border-radius: 100px;
+      }
+    }
+  }
+}
+
+// Toggle 开关
+.switch-track {
+  width: 50px;
+  height: 30px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+
+  &.on { background: var(--lime); }
+
+  .switch-thumb {
+    position: absolute;
+    top: 2px; left: 2px;
+    width: 26px; height: 26px;
+    border-radius: 100px;
+    background: #fff;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+    &.on { transform: translateX(20px); }
+  }
+}
+
+// 动画
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.4s ease both; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scan {
+  0%, 100% { top: 0; }
+  50% { top: calc(100% - 2px); }
+}
+
+// 图片占位
+.img-ph {
+  background:
+    radial-gradient(ellipse 50% 30% at 60% 35%, rgba(206, 255, 77, 0.18), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 110%, rgba(80, 90, 100, 0.20), transparent 60%),
+    linear-gradient(165deg, #353b3e 0%, #1d2123 45%, #0a0c0d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+// 安全区
+.safe-top { padding-top: 56px; }
+.safe-bottom { padding-bottom: 36px; }

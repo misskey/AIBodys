@@ -1,0 +1,8 @@
+export { default as Icon, WeChatIcon } from './Icon'
+export { default as PageHeader } from './PageHeader'
+export { default as TabBar } from './TabBar'
+export { default as LimeButton } from './LimeButton'
+export { default as Ring } from './Ring'
+export { default as Bar } from './Bar'
+export { default as Avatar } from './Avatar'
+export { default as EqSilhouette } from './EqSilhouette'

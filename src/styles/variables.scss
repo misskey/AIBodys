@@ -1,0 +1,31 @@
+// 设计系统色板
+$bg: #0a0d0a;
+$surface: #15191a;
+$surface-2: #1c2124;
+$surface-3: #242a2d;
+$line: rgba(255, 255, 255, 0.06);
+$line-2: rgba(255, 255, 255, 0.10);
+$lime: #ceff4d;
+$lime-dim: #b8e63d;
+$text: #ffffff;
+$text-2: rgba(255, 255, 255, 0.62);
+$text-3: rgba(255, 255, 255, 0.38);
+$danger: #ff6363;
+$warn: #f9b04a;
+
+// CSS 自定义属性（运行时可覆盖）
+:root {
+  --bg: #{$bg};
+  --surface: #{$surface};
+  --surface-2: #{$surface-2};
+  --surface-3: #{$surface-3};
+  --line: #{$line};
+  --line-2: #{$line-2};
+  --lime: #{$lime};
+  --lime-dim: #{$lime-dim};
+  --text: #{$text};
+  --text-2: #{$text-2};
+  --text-3: #{$text-3};
+  --danger: #{$danger};
+  --warn: #{$warn};
+}

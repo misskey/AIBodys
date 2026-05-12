@@ -1,0 +1,7 @@
+{
+  "desc": "关于其他页面是否支持被直接访问的配置",
+  "rules": [{
+    "action": "allow",
+    "page": "pages/splash/index"
+  }]
+}
